@@ -18,6 +18,11 @@
 		A103331E1243DEA700CEB67B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		A103331F1243DEA700CEB67B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765FC0DF74451002DB57D /* CoreGraphics.framework */; };
 		A10333201243DEA800CEB67B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
+		A103333012450C7B00CEB67B /* BobPageScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = A103332F12450C7B00CEB67B /* BobPageScrollView.m */; };
+		A103333112450C7B00CEB67B /* BobPageScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = A103332F12450C7B00CEB67B /* BobPageScrollView.m */; };
+		A10333411245166300CEB67B /* FullScreenPhotoController.m in Sources */ = {isa = PBXBuildFile; fileRef = A10333401245166300CEB67B /* FullScreenPhotoController.m */; };
+		A10333421245166300CEB67B /* FullScreenPhotoController.m in Sources */ = {isa = PBXBuildFile; fileRef = A10333401245166300CEB67B /* FullScreenPhotoController.m */; };
+		A103337812451B4900CEB67B /* ExampleSelectionTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = A103333D124512F200CEB67B /* ExampleSelectionTableController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +41,12 @@
 		A10333151243DE0B00CEB67B /* GHUnitIOSTestMain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHUnitIOSTestMain.m; sourceTree = "<group>"; };
 		A10333171243DE3D00CEB67B /* TestUnitTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestUnitTest.h; sourceTree = "<group>"; };
 		A10333181243DE3D00CEB67B /* TestUnitTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestUnitTest.m; sourceTree = "<group>"; };
+		A103332E12450C7B00CEB67B /* BobPageScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BobPageScrollView.h; sourceTree = "<group>"; };
+		A103332F12450C7B00CEB67B /* BobPageScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BobPageScrollView.m; sourceTree = "<group>"; };
+		A103333C124512F200CEB67B /* ExampleSelectionTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExampleSelectionTableController.h; sourceTree = "<group>"; };
+		A103333D124512F200CEB67B /* ExampleSelectionTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExampleSelectionTableController.m; sourceTree = "<group>"; };
+		A103333F1245166300CEB67B /* FullScreenPhotoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FullScreenPhotoController.h; sourceTree = "<group>"; };
+		A10333401245166300CEB67B /* FullScreenPhotoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FullScreenPhotoController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +77,7 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				A103333A124512B300CEB67B /* Examples */,
 				A10332C6124161D900CEB67B /* BobPageScroll */,
 				1D3623240D0F684500981E51 /* BobPageScrollAppDelegate.h */,
 				1D3623250D0F684500981E51 /* BobPageScrollAppDelegate.m */,
@@ -135,6 +147,8 @@
 		A10332C6124161D900CEB67B /* BobPageScroll */ = {
 			isa = PBXGroup;
 			children = (
+				A103332E12450C7B00CEB67B /* BobPageScrollView.h */,
+				A103332F12450C7B00CEB67B /* BobPageScrollView.m */,
 			);
 			path = BobPageScroll;
 			sourceTree = "<group>";
@@ -147,6 +161,26 @@
 				A10333181243DE3D00CEB67B /* TestUnitTest.m */,
 			);
 			path = Test;
+			sourceTree = "<group>";
+		};
+		A103333A124512B300CEB67B /* Examples */ = {
+			isa = PBXGroup;
+			children = (
+				A103333E1245160300CEB67B /* fullscreenphotos */,
+				A103333C124512F200CEB67B /* ExampleSelectionTableController.h */,
+				A103333D124512F200CEB67B /* ExampleSelectionTableController.m */,
+			);
+			name = Examples;
+			path = Classes/Examples;
+			sourceTree = SOURCE_ROOT;
+		};
+		A103333E1245160300CEB67B /* fullscreenphotos */ = {
+			isa = PBXGroup;
+			children = (
+				A103333F1245166300CEB67B /* FullScreenPhotoController.h */,
+				A10333401245166300CEB67B /* FullScreenPhotoController.m */,
+			);
+			path = fullscreenphotos;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -228,6 +262,9 @@
 			files = (
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
 				1D3623260D0F684500981E51 /* BobPageScrollAppDelegate.m in Sources */,
+				A103333112450C7B00CEB67B /* BobPageScrollView.m in Sources */,
+				A10333421245166300CEB67B /* FullScreenPhotoController.m in Sources */,
+				A103337812451B4900CEB67B /* ExampleSelectionTableController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -237,6 +274,8 @@
 			files = (
 				A10333161243DE0B00CEB67B /* GHUnitIOSTestMain.m in Sources */,
 				A10333191243DE3D00CEB67B /* TestUnitTest.m in Sources */,
+				A103333012450C7B00CEB67B /* BobPageScrollView.m in Sources */,
+				A10333411245166300CEB67B /* FullScreenPhotoController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

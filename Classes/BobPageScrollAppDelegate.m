@@ -1,4 +1,6 @@
 #import "BobPageScrollAppDelegate.h"
+#import "ExampleSelectionTableController.h"
+
 
 @implementation BobPageScrollAppDelegate
 
@@ -11,11 +13,12 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
     window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 	
-	UIView *view = [[[UIView alloc] initWithFrame:[[UIScreen mainScreen] applicationFrame]] autorelease];
-	view.backgroundColor = [UIColor greenColor];
+	ExampleSelectionTableController *exampleSelectionTableController = 
+					[[ExampleSelectionTableController alloc] initWithStyle:UITableViewStylePlain];
+	exampleNavigationController = [[UINavigationController alloc] initWithRootViewController:exampleSelectionTableController];
+	[exampleSelectionTableController release];
 	
-	[window addSubview:view];
-	
+	[window addSubview:exampleNavigationController.view];
     [window makeKeyAndVisible];
 	
 	return YES;
@@ -71,6 +74,7 @@
 
 
 - (void)dealloc {
+	[exampleNavigationController release];
     [window release];
     [super dealloc];
 }
