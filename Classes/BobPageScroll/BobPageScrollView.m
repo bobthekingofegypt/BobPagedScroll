@@ -20,9 +20,11 @@
 		
         pagedScrollView = [[UIScrollView alloc] initWithFrame:originalFrame];
 		pagedScrollView.pagingEnabled = YES;
-		pagedScrollView.backgroundColor = [UIColor blackColor];
+		pagedScrollView.backgroundColor = [UIColor redColor];
 		pagedScrollView.showsVerticalScrollIndicator = NO;
 		pagedScrollView.showsHorizontalScrollIndicator = NO;
+		
+		[self addSubview:pagedScrollView];
     }
     return self;
 }
@@ -41,7 +43,10 @@
 	NSUInteger pageCount = [self numberOfPages];
 	pagedScrollView.frame = [self calculateFrameSize];
 	pagedScrollView.contentSize = [self calculateContentSize:pageCount];
+	
+	
 }
+
 
 -(CGRect) calculateFrameSize {
 	return CGRectMake(originalFrame.origin.x - self.padding, 
@@ -49,6 +54,7 @@
 					  originalFrame.size.width + (self.padding * 2), 
 					  originalFrame.size.height);
 }
+
 
 -(CGSize) calculateContentSize:(NSUInteger) pageCount {
 	return CGSizeMake(self.frame.size.width * pageCount, self.frame.size.height);
