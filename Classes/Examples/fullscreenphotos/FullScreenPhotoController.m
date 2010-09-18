@@ -10,8 +10,11 @@
 
 -(void) loadView {
 	[super loadView];	
-	bobPageScrollView = [[BobPageScrollView alloc] initWithFrame:self.view.frame];
+	bobPageScrollView = [[BobPageScrollView alloc] initWithFrame:CGRectMake(0.0f,0.0f,self.view.frame.size.width, self.view.frame.size.height)];
 	bobPageScrollView.datasource = self;
+	
+	[self.view addSubview:bobPageScrollView];
+	
 	[bobPageScrollView reloadData];
 }
 
@@ -33,5 +36,8 @@
 	return 0;
 }
 
+-(UIView *) viewForPage:(NSUInteger)page {
+	return nil;
+}
 
 @end
