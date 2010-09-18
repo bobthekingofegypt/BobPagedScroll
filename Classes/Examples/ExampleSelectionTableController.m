@@ -1,5 +1,6 @@
 #import "ExampleSelectionTableController.h"
 #import "FullScreenPhotoController.h"
+#import "FullScreenNumberController.h"
 
 
 @implementation ExampleSelectionTableController
@@ -28,10 +29,11 @@
 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 1;
+    return 2;
 }
 
-#define kFullScreenPhotos 0
+#define kFullScreenNumbers 0
+#define kFullScreenPhotos 1
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *CellIdentifier = @"ExampleSelectionCell";
@@ -42,7 +44,9 @@
 		cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     }
     
-    if (indexPath.row == kFullScreenPhotos) {
+	if (indexPath.row == kFullScreenNumbers) {
+		cell.textLabel.text = @"Full Screen Numbers";
+	} else if (indexPath.row == kFullScreenPhotos) {
 		cell.textLabel.text = @"Full Screen Photos";
 	}
     
@@ -54,7 +58,11 @@
 #pragma mark Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (indexPath.row == kFullScreenPhotos) {
+    if (indexPath.row == kFullScreenNumbers) {
+		FullScreenNumberController *viewController = [[FullScreenNumberController alloc] init];
+		[self.navigationController pushViewController:viewController animated:YES];
+		[viewController release];
+	} else if (indexPath.row == kFullScreenPhotos) {
 		FullScreenPhotoController *viewController = [[FullScreenPhotoController alloc] init];
 		[self.navigationController pushViewController:viewController animated:YES];
 		[viewController release];

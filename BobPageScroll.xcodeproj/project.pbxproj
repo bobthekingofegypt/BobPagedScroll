@@ -23,6 +23,8 @@
 		A10333411245166300CEB67B /* FullScreenPhotoController.m in Sources */ = {isa = PBXBuildFile; fileRef = A10333401245166300CEB67B /* FullScreenPhotoController.m */; };
 		A10333421245166300CEB67B /* FullScreenPhotoController.m in Sources */ = {isa = PBXBuildFile; fileRef = A10333401245166300CEB67B /* FullScreenPhotoController.m */; };
 		A103337812451B4900CEB67B /* ExampleSelectionTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = A103333D124512F200CEB67B /* ExampleSelectionTableController.m */; };
+		A10333C71245285400CEB67B /* FullScreenNumberController.m in Sources */ = {isa = PBXBuildFile; fileRef = A10333C61245285400CEB67B /* FullScreenNumberController.m */; };
+		A10333C81245285400CEB67B /* FullScreenNumberController.m in Sources */ = {isa = PBXBuildFile; fileRef = A10333C61245285400CEB67B /* FullScreenNumberController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +49,8 @@
 		A103333D124512F200CEB67B /* ExampleSelectionTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExampleSelectionTableController.m; sourceTree = "<group>"; };
 		A103333F1245166300CEB67B /* FullScreenPhotoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FullScreenPhotoController.h; sourceTree = "<group>"; };
 		A10333401245166300CEB67B /* FullScreenPhotoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FullScreenPhotoController.m; sourceTree = "<group>"; };
+		A10333C51245285400CEB67B /* FullScreenNumberController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FullScreenNumberController.h; sourceTree = "<group>"; };
+		A10333C61245285400CEB67B /* FullScreenNumberController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FullScreenNumberController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +170,7 @@
 		A103333A124512B300CEB67B /* Examples */ = {
 			isa = PBXGroup;
 			children = (
+				A10333C2124527F500CEB67B /* fullscreennumbers */,
 				A103333E1245160300CEB67B /* fullscreenphotos */,
 				A103333C124512F200CEB67B /* ExampleSelectionTableController.h */,
 				A103333D124512F200CEB67B /* ExampleSelectionTableController.m */,
@@ -181,6 +186,15 @@
 				A10333401245166300CEB67B /* FullScreenPhotoController.m */,
 			);
 			path = fullscreenphotos;
+			sourceTree = "<group>";
+		};
+		A10333C2124527F500CEB67B /* fullscreennumbers */ = {
+			isa = PBXGroup;
+			children = (
+				A10333C51245285400CEB67B /* FullScreenNumberController.h */,
+				A10333C61245285400CEB67B /* FullScreenNumberController.m */,
+			);
+			path = fullscreennumbers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,6 +279,7 @@
 				A103333112450C7B00CEB67B /* BobPageScrollView.m in Sources */,
 				A10333421245166300CEB67B /* FullScreenPhotoController.m in Sources */,
 				A103337812451B4900CEB67B /* ExampleSelectionTableController.m in Sources */,
+				A10333C81245285400CEB67B /* FullScreenNumberController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,6 +291,7 @@
 				A10333191243DE3D00CEB67B /* TestUnitTest.m in Sources */,
 				A103333012450C7B00CEB67B /* BobPageScrollView.m in Sources */,
 				A10333411245166300CEB67B /* FullScreenPhotoController.m in Sources */,
+				A10333C71245285400CEB67B /* FullScreenNumberController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
