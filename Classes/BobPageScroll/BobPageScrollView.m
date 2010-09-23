@@ -1,4 +1,5 @@
 #import "BobPageScrollView.h"
+#import "BobPage.h"
 
 #define kDefaultPadding 0
 
@@ -6,6 +7,11 @@
 -(NSUInteger) numberOfPages;
 -(CGRect) calculateFrameSize;
 -(CGSize) calculateContentSize:(NSUInteger) pageCount;
+-(BobPage *) pageForIndex:(NSUInteger)index;
+-(BOOL) isDisplayingPageForIndex:(NSUInteger) index;
+-(void) layoutPages;
+-(void) setUpPage:(BobPage *)page forIndex:(NSUInteger)index;
+-(void) removePageForIndex:(NSUInteger) index;
 @end
 
 
@@ -20,11 +26,17 @@
 		
         pagedScrollView = [[UIScrollView alloc] initWithFrame:originalFrame];
 		pagedScrollView.pagingEnabled = YES;
-		pagedScrollView.backgroundColor = [UIColor redColor];
 		pagedScrollView.showsVerticalScrollIndicator = NO;
 		pagedScrollView.showsHorizontalScrollIndicator = NO;
+		pagedScrollView.delegate = self;
 		
 		[self addSubview:pagedScrollView];
+		
+		reusablePages = [[NSMutableDictionary alloc] init];
+		visiblePages = [[NSMutableDictionary alloc] init];
+		
+		firstShowingPageIndex = 0;
+		lastShowingPageIndex = 0;
     }
     return self;
 }
@@ -32,6 +44,8 @@
 - (void)dealloc {
 	_datasource = nil;
 	[pagedScrollView release];
+	[reusablePages release];
+	[visiblePages release];
 	
     [super dealloc];
 }
@@ -44,7 +58,7 @@
 	pagedScrollView.frame = [self calculateFrameSize];
 	pagedScrollView.contentSize = [self calculateContentSize:pageCount];
 	
-	
+	[self layoutPages];
 }
 
 
@@ -57,7 +71,85 @@
 
 
 -(CGSize) calculateContentSize:(NSUInteger) pageCount {
-	return CGSizeMake(self.frame.size.width * pageCount, self.frame.size.height);
+	return CGSizeMake((self.frame.size.width + (2 * self.padding)) * pageCount, self.frame.size.height);
+}
+
+
+-(void) layoutPages {
+	CGRect visibleBounds = pagedScrollView.bounds;
+	int firstNeededPageIndex = floorf(CGRectGetMinX(visibleBounds) / CGRectGetWidth(visibleBounds));
+	int lastNeededPageIndex  = floorf((CGRectGetMaxX(visibleBounds)-1) / CGRectGetWidth(visibleBounds));
+	firstNeededPageIndex = MAX(firstNeededPageIndex, 0);
+	lastNeededPageIndex  = MIN(lastNeededPageIndex, [self numberOfPages] - 1);
+	
+	for (NSUInteger index = firstShowingPageIndex; index < firstNeededPageIndex; index++) {
+		[self removePageForIndex:index];
+	}
+	
+	for (NSUInteger index = lastShowingPageIndex; index > lastNeededPageIndex; index--) {
+		[self removePageForIndex:index];
+	}
+	
+	for (int index = firstNeededPageIndex; index <= lastNeededPageIndex; index++) {
+		if (![self isDisplayingPageForIndex:index]) {
+			BobPage *page = [self pageForIndex:index];
+			[self setUpPage:page forIndex:index];
+			[pagedScrollView addSubview:page];
+			[visiblePages setObject:page forKey:[NSNumber numberWithInt:index]];
+		}
+	}
+	
+	firstShowingPageIndex = firstNeededPageIndex;
+	lastShowingPageIndex = lastNeededPageIndex;
+}
+
+-(void) removePageForIndex:(NSUInteger) index {
+	NSNumber *indexNumber = [NSNumber numberWithInt:index];
+	BobPage *page = [visiblePages objectForKey:indexNumber];
+	
+	if (page) {
+		NSString *entryKey = [[page.reuseIdentifier copy] autorelease];
+		NSMutableSet *set = [reusablePages objectForKey:entryKey];
+		if (set == nil) {
+			set = [[[NSMutableSet alloc] init] autorelease];
+		}
+		[set addObject:page];
+	
+		[reusablePages setObject:set forKey:entryKey];
+		[page removeFromSuperview];
+		[visiblePages removeObjectForKey:indexNumber];
+	}
+}
+
+-(BOOL) isDisplayingPageForIndex:(NSUInteger) index {
+	BobPage *page = [visiblePages objectForKey:[NSNumber numberWithInt:index]];
+	if (page) {
+		return YES;
+	} 
+	
+	return NO;
+}
+
+-(void) setUpPage:(BobPage *)page forIndex:(NSUInteger)index {
+	page.index = index;
+	page.frame = CGRectMake((pagedScrollView.frame.size.width * index) + self.padding, 
+							0.0f, 
+							pagedScrollView.frame.size.width - (2 * self.padding), 
+							pagedScrollView.frame.size.height);
+}
+
+-(BobPage *) dequeueReusablePageWithIdentifier:(NSString *)reuseIdentifier {
+	NSMutableSet *set = [reusablePages objectForKey:reuseIdentifier];
+	if (set != nil) {
+		BobPage *page = [set anyObject];
+		if (page != nil) {
+			[[page retain] autorelease];
+			[set removeObject:page];
+		}
+		return page;
+	}
+	
+	return nil;
 }
 
 
@@ -68,8 +160,16 @@
 	return [self.datasource numberOfPages];
 }
 
--(UIView *) viewForPageNumber:(NSUInteger) page {
-	return [self.datasource viewForPage:page];
+-(BobPage *) pageForIndex:(NSUInteger)index {
+	return [self.datasource bobPageScrollView:self pageForIndex:index];
+}
+
+
+#pragma mark -
+#pragma mark ScrollView delegate methods
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    [self layoutPages];
 }
 
 

@@ -3,7 +3,7 @@
 
 
 @interface FullScreenNumberController : UIViewController<BobPageScrollViewDatasource> {
-	BobPageScrollView *bobPageScrollView;
+	BobPageScrollView *_bobPageScrollView;
 }
 
 @end

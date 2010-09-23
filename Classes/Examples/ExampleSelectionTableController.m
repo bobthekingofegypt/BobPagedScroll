@@ -12,6 +12,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"Test Selection";
+	
+	UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:nil action:nil];
+	self.navigationItem.backBarButtonItem = backButton;
+	[backButton release];
 }
 
 -(void) viewWillAppear:(BOOL)animated {	
