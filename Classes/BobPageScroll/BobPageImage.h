@@ -1,8 +1,9 @@
 #import <Foundation/Foundation.h>
 #import "BobPage.h"
+#import "TapDetectingImageView.h"
 
-@interface BobPageImage : BobPage<UIScrollViewDelegate> {
-	UIImageView *_imageView;
+@interface BobPageImage : BobPage<UIScrollViewDelegate, TapDetectingImageViewDelegate> {
+	TapDetectingImageView *_imageView;
 	UIScrollView *_scrollView;
 }
 
