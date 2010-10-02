@@ -3,7 +3,8 @@
 
 
 @interface FullScreenPhotoController : UIViewController<BobPageScrollViewDatasource> {
-	BobPageScrollView *bobPageScrollView;
+	BobPageScrollView *_bobPageScrollView;
+	NSMutableArray *images;
 }
 
 @end

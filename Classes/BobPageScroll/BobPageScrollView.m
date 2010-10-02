@@ -12,6 +12,7 @@
 -(void) layoutPages;
 -(void) setUpPage:(BobPage *)page forIndex:(NSUInteger)index;
 -(void) removePageForIndex:(NSUInteger) index;
+-(void) resetPageFrameForIndex:(NSUInteger) index;
 @end
 
 
@@ -22,9 +23,12 @@
 - (id)initWithFrame:(CGRect)frame {
     if ((self = [super initWithFrame:frame])) {
 		self.padding = kDefaultPadding;
+		self.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+		
 		originalFrame = frame;
 		
         pagedScrollView = [[UIScrollView alloc] initWithFrame:originalFrame];
+		pagedScrollView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
 		pagedScrollView.pagingEnabled = YES;
 		pagedScrollView.showsVerticalScrollIndicator = NO;
 		pagedScrollView.showsHorizontalScrollIndicator = NO;
@@ -37,6 +41,8 @@
 		
 		firstShowingPageIndex = 0;
 		lastShowingPageIndex = 0;
+		
+		currentIndex = 0;
     }
     return self;
 }
@@ -58,6 +64,11 @@
 	pagedScrollView.frame = [self calculateFrameSize];
 	pagedScrollView.contentSize = [self calculateContentSize:pageCount];
 	
+	if (!pagedScrollView.dragging) {
+		//[pagedScrollView scrollRectToVisible:CGRectMake(currentIndex * pagedScrollView.frame.size.width, 0.0f, pagedScrollView.frame.size.width, pagedScrollView.frame.size.height) animated:YES];
+		pagedScrollView.contentOffset = CGPointMake(currentIndex * pagedScrollView.frame.size.width, 0.0f);
+	}
+	
 	[self layoutPages];
 }
 
@@ -65,13 +76,13 @@
 -(CGRect) calculateFrameSize {
 	return CGRectMake(originalFrame.origin.x - self.padding, 
 					  originalFrame.origin.y, 
-					  originalFrame.size.width + (self.padding * 2), 
-					  originalFrame.size.height);
+					  self.bounds.size.width + (self.padding * 2), 
+					  self.bounds.size.height);
 }
 
 
 -(CGSize) calculateContentSize:(NSUInteger) pageCount {
-	return CGSizeMake((self.frame.size.width + (2 * self.padding)) * pageCount, self.frame.size.height);
+	return CGSizeMake((self.bounds.size.width + (2 * self.padding)) * pageCount, self.bounds.size.height);
 }
 
 
@@ -91,11 +102,14 @@
 	}
 	
 	for (int index = firstNeededPageIndex; index <= lastNeededPageIndex; index++) {
+		currentIndex = index;
 		if (![self isDisplayingPageForIndex:index]) {
 			BobPage *page = [self pageForIndex:index];
 			[self setUpPage:page forIndex:index];
 			[pagedScrollView addSubview:page];
 			[visiblePages setObject:page forKey:[NSNumber numberWithInt:index]];
+		} else {
+			[self resetPageFrameForIndex:index];
 		}
 	}
 	
@@ -137,6 +151,14 @@
 							pagedScrollView.frame.size.width - (2 * self.padding), 
 							pagedScrollView.frame.size.height);
 }
+
+-(void) resetPageFrameForIndex:(NSUInteger) index {
+	BobPage *page = [visiblePages objectForKey:[NSNumber numberWithInt:index]];
+	if (page) {
+		[self setUpPage:page forIndex:index];
+	}
+}
+	
 
 -(BobPage *) dequeueReusablePageWithIdentifier:(NSString *)reuseIdentifier {
 	NSMutableSet *set = [reusablePages objectForKey:reuseIdentifier];

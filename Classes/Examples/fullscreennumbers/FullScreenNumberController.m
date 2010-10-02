@@ -11,9 +11,6 @@
 -(void) loadView {
 	[super loadView];	
 	self.title = @"Numbers";
-	
-	
-	
 	self.navigationController.navigationBar.barStyle = UIBarStyleBlackTranslucent;
 	_bobPageScrollView = [[BobPageScrollView alloc] initWithFrame:CGRectMake(0.0f,0.0f,self.view.frame.size.width, self.view.frame.size.height)];
 	_bobPageScrollView.datasource = self;

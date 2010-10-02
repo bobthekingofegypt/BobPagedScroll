@@ -29,9 +29,13 @@
 		A10333D0124A7C6100CEB67B /* BobPage.m in Sources */ = {isa = PBXBuildFile; fileRef = A10333CE124A7C6100CEB67B /* BobPage.m */; };
 		A1033400124A9FA600CEB67B /* FullScreenNumberPage.m in Sources */ = {isa = PBXBuildFile; fileRef = A10333FF124A9FA600CEB67B /* FullScreenNumberPage.m */; };
 		A1033401124A9FA600CEB67B /* FullScreenNumberPage.m in Sources */ = {isa = PBXBuildFile; fileRef = A10333FF124A9FA600CEB67B /* FullScreenNumberPage.m */; };
-		A1033405124A9FE300CEB67B /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = A1033404124A9FE300CEB67B /* background.png */; };
-		A1033406124A9FE300CEB67B /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = A1033404124A9FE300CEB67B /* background.png */; };
 		A113EA0B124BECA200207B0A /* BobPageScrollViewTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A113E9F3124BEA3A00207B0A /* BobPageScrollViewTest.m */; };
+		A113EA511253CCAE00207B0A /* BobPageImage.m in Sources */ = {isa = PBXBuildFile; fileRef = A113EA501253CCAE00207B0A /* BobPageImage.m */; };
+		A113EA521253CCAE00207B0A /* BobPageImage.m in Sources */ = {isa = PBXBuildFile; fileRef = A113EA501253CCAE00207B0A /* BobPageImage.m */; };
+		A113EC891257709900207B0A /* content__yet_disturbing_by_woxys-d2zv869.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A113EC871257709900207B0A /* content__yet_disturbing_by_woxys-d2zv869.jpg */; };
+		A113EC8A1257709900207B0A /* nanga__the_beauty_queen_by_woxys-d2yfqxy.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A113EC881257709900207B0A /* nanga__the_beauty_queen_by_woxys-d2yfqxy.jpg */; };
+		A113EC8B1257709900207B0A /* content__yet_disturbing_by_woxys-d2zv869.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A113EC871257709900207B0A /* content__yet_disturbing_by_woxys-d2zv869.jpg */; };
+		A113EC8C1257709900207B0A /* nanga__the_beauty_queen_by_woxys-d2yfqxy.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A113EC881257709900207B0A /* nanga__the_beauty_queen_by_woxys-d2yfqxy.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,9 +66,12 @@
 		A10333CE124A7C6100CEB67B /* BobPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BobPage.m; sourceTree = "<group>"; };
 		A10333FE124A9FA600CEB67B /* FullScreenNumberPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FullScreenNumberPage.h; sourceTree = "<group>"; };
 		A10333FF124A9FA600CEB67B /* FullScreenNumberPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FullScreenNumberPage.m; sourceTree = "<group>"; };
-		A1033404124A9FE300CEB67B /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 		A113E9F2124BEA3A00207B0A /* BobPageScrollViewTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BobPageScrollViewTest.h; sourceTree = "<group>"; };
 		A113E9F3124BEA3A00207B0A /* BobPageScrollViewTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BobPageScrollViewTest.m; sourceTree = "<group>"; };
+		A113EA4F1253CCAE00207B0A /* BobPageImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BobPageImage.h; sourceTree = "<group>"; };
+		A113EA501253CCAE00207B0A /* BobPageImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BobPageImage.m; sourceTree = "<group>"; };
+		A113EC871257709900207B0A /* content__yet_disturbing_by_woxys-d2zv869.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "content__yet_disturbing_by_woxys-d2zv869.jpg"; sourceTree = "<group>"; };
+		A113EC881257709900207B0A /* nanga__the_beauty_queen_by_woxys-d2yfqxy.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "nanga__the_beauty_queen_by_woxys-d2yfqxy.jpg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,7 +165,8 @@
 		A10332C31241617F00CEB67B /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				A1033404124A9FE300CEB67B /* background.png */,
+				A113EC871257709900207B0A /* content__yet_disturbing_by_woxys-d2zv869.jpg */,
+				A113EC881257709900207B0A /* nanga__the_beauty_queen_by_woxys-d2yfqxy.jpg */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -170,6 +178,8 @@
 				A103332F12450C7B00CEB67B /* BobPageScrollView.m */,
 				A10333CD124A7C6100CEB67B /* BobPage.h */,
 				A10333CE124A7C6100CEB67B /* BobPage.m */,
+				A113EA4F1253CCAE00207B0A /* BobPageImage.h */,
+				A113EA501253CCAE00207B0A /* BobPageImage.m */,
 			);
 			path = BobPageScroll;
 			sourceTree = "<group>";
@@ -278,7 +288,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A1033406124A9FE300CEB67B /* background.png in Resources */,
+				A113EC891257709900207B0A /* content__yet_disturbing_by_woxys-d2zv869.jpg in Resources */,
+				A113EC8A1257709900207B0A /* nanga__the_beauty_queen_by_woxys-d2yfqxy.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,7 +297,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A1033405124A9FE300CEB67B /* background.png in Resources */,
+				A113EC8B1257709900207B0A /* content__yet_disturbing_by_woxys-d2zv869.jpg in Resources */,
+				A113EC8C1257709900207B0A /* nanga__the_beauty_queen_by_woxys-d2yfqxy.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,6 +317,7 @@
 				A10333C81245285400CEB67B /* FullScreenNumberController.m in Sources */,
 				A10333D0124A7C6100CEB67B /* BobPage.m in Sources */,
 				A1033401124A9FA600CEB67B /* FullScreenNumberPage.m in Sources */,
+				A113EA511253CCAE00207B0A /* BobPageImage.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,6 +333,7 @@
 				A10333CF124A7C6100CEB67B /* BobPage.m in Sources */,
 				A1033400124A9FA600CEB67B /* FullScreenNumberPage.m in Sources */,
 				A113EA0B124BECA200207B0A /* BobPageScrollViewTest.m in Sources */,
+				A113EA521253CCAE00207B0A /* BobPageImage.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

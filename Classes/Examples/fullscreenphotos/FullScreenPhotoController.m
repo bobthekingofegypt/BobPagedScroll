@@ -1,23 +1,53 @@
 #import "FullScreenPhotoController.h"
-
+#import "BobPageImage.h"
 
 @implementation FullScreenPhotoController
 
+-(id) init {
+	if (self = [super init]) {
+		images = [[NSMutableArray alloc] initWithObjects:
+					[UIImage imageNamed:@"content__yet_disturbing_by_woxys-d2zv869.jpg"],
+  					[UIImage imageNamed:@"nanga__the_beauty_queen_by_woxys-d2yfqxy.jpg"],
+					nil];
+	}
+	
+	return self;
+}
+
 - (void)dealloc {
-	[bobPageScrollView release];
+	[_bobPageScrollView release];
+	[images release];
     [super dealloc];
 }
 
 -(void) loadView {
 	[super loadView];	
-	bobPageScrollView = [[BobPageScrollView alloc] initWithFrame:CGRectMake(0.0f,0.0f,self.view.frame.size.width, self.view.frame.size.height)];
-	bobPageScrollView.datasource = self;
+	[self setWantsFullScreenLayout:YES];
 	
-	[self.view addSubview:bobPageScrollView];
+	_bobPageScrollView = [[BobPageScrollView alloc] initWithFrame:CGRectMake(0.0f,0.0f,self.view.frame.size.width, self.view.frame.size.height)];
+	_bobPageScrollView.padding = 10.0f;
+	_bobPageScrollView.datasource = self;
 	
-	[bobPageScrollView reloadData];
+	[self.view addSubview:_bobPageScrollView];
+	
+	[_bobPageScrollView reloadData];
 }
 
+-(BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
+	return YES;
+}
+
+
+ - (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation {
+	
+	 [super didRotateFromInterfaceOrientation:fromInterfaceOrientation];
+	 
+}
+
+- (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
+										 duration:(NSTimeInterval)duration {
+	[_bobPageScrollView reloadData];
+}
 
 -(void) didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -33,11 +63,20 @@
 #pragma mark BobPageScrollViewDatasource methods
 
 -(NSUInteger) numberOfPages {
-	return 0;
+	return [images count];
 }
 
--(UIView *) viewForPage:(NSUInteger)page {
-	return nil;
+-(BobPage *) bobPageScrollView:(BobPageScrollView *)bobPageScrollView pageForIndex:(NSUInteger)index {
+	static NSString *reuseIdentifier = @"Test";
+	
+	BobPageImage *page = (BobPageImage *)[bobPageScrollView dequeueReusablePageWithIdentifier:reuseIdentifier];
+	if (!page) {
+		page = [[[BobPageImage alloc] initWithFrame:CGRectMake(0.0f, 0.0f, 320.0f, 480.0f) andReuseIdentifier:reuseIdentifier] autorelease];
+	}
+	
+	page.imageView.image = [images objectAtIndex:index];
+	
+	return page;
 }
 
 @end

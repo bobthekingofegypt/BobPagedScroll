@@ -11,7 +11,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+	self.view.frame = [[UIScreen mainScreen] bounds];
     self.title = @"Test Selection";
+	self.wantsFullScreenLayout = YES;
 	
 	UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:nil action:nil];
 	self.navigationItem.backBarButtonItem = backButton;
@@ -67,6 +69,8 @@
 		[self.navigationController pushViewController:viewController animated:YES];
 		[viewController release];
 	} else if (indexPath.row == kFullScreenPhotos) {
+		[[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleBlackTranslucent];
+		self.navigationController.navigationBar.barStyle = UIBarStyleBlackTranslucent;
 		FullScreenPhotoController *viewController = [[FullScreenPhotoController alloc] init];
 		[self.navigationController pushViewController:viewController animated:YES];
 		[viewController release];
