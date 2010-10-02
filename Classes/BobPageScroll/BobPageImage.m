@@ -34,6 +34,15 @@
 	[super dealloc];
 }
 
+
+#pragma mark -
+#pragma mark BobPage Methods
+
+-(void) prepareForReuse {
+	[_scrollView zoomToRect:self.frame animated:NO];
+}
+
+
 #pragma mark -
 #pragma mark ScrollView Delegate methods
 

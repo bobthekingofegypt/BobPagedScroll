@@ -168,6 +168,7 @@
 			[[page retain] autorelease];
 			[set removeObject:page];
 		}
+		[page prepareForReuse];
 		return page;
 	}
 	

@@ -11,5 +11,6 @@
 @property (nonatomic, readonly) NSString *reuseIdentifier;
 
 -(id)initWithFrame:(CGRect)frame andReuseIdentifier:(NSString *)reuseIdentifier;
+-(void) prepareForReuse;
 
 @end
