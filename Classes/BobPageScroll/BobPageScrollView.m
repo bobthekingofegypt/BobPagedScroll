@@ -33,6 +33,7 @@
 		pagedScrollView.showsVerticalScrollIndicator = NO;
 		pagedScrollView.showsHorizontalScrollIndicator = NO;
 		pagedScrollView.delegate = self;
+		pagedScrollView.backgroundColor = [UIColor blackColor];
 		
 		[self addSubview:pagedScrollView];
 		
@@ -65,7 +66,6 @@
 	pagedScrollView.contentSize = [self calculateContentSize:pageCount];
 	
 	if (!pagedScrollView.dragging) {
-		//[pagedScrollView scrollRectToVisible:CGRectMake(currentIndex * pagedScrollView.frame.size.width, 0.0f, pagedScrollView.frame.size.width, pagedScrollView.frame.size.height) animated:YES];
 		pagedScrollView.contentOffset = CGPointMake(currentIndex * pagedScrollView.frame.size.width, 0.0f);
 	}
 	
@@ -192,7 +192,9 @@
 #pragma mark ScrollView delegate methods
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
-    [self layoutPages];
+	if (pagedScrollView.dragging) {
+		[self layoutPages];
+	}
 }
 
 

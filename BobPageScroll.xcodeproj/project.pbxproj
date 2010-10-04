@@ -38,6 +38,10 @@
 		A113EC8C1257709900207B0A /* nanga__the_beauty_queen_by_woxys-d2yfqxy.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A113EC881257709900207B0A /* nanga__the_beauty_queen_by_woxys-d2yfqxy.jpg */; };
 		A113ED121257709900207B0A /* TapDetectingImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = A113ED111257709900207B0A /* TapDetectingImageView.m */; };
 		A113ED131257709900207B0A /* TapDetectingImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = A113ED111257709900207B0A /* TapDetectingImageView.m */; };
+		A113ED8C1257AADC00207B0A /* Monika_was_delicious_by_woxys.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A113ED8A1257AADC00207B0A /* Monika_was_delicious_by_woxys.jpg */; };
+		A113ED8D1257AADC00207B0A /* Obviously_dangerous_by_woxys.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A113ED8B1257AADC00207B0A /* Obviously_dangerous_by_woxys.jpg */; };
+		A113ED8E1257AADC00207B0A /* Monika_was_delicious_by_woxys.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A113ED8A1257AADC00207B0A /* Monika_was_delicious_by_woxys.jpg */; };
+		A113ED8F1257AADC00207B0A /* Obviously_dangerous_by_woxys.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A113ED8B1257AADC00207B0A /* Obviously_dangerous_by_woxys.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,6 +80,8 @@
 		A113EC881257709900207B0A /* nanga__the_beauty_queen_by_woxys-d2yfqxy.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "nanga__the_beauty_queen_by_woxys-d2yfqxy.jpg"; sourceTree = "<group>"; };
 		A113ED101257709900207B0A /* TapDetectingImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TapDetectingImageView.h; sourceTree = "<group>"; };
 		A113ED111257709900207B0A /* TapDetectingImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TapDetectingImageView.m; sourceTree = "<group>"; };
+		A113ED8A1257AADC00207B0A /* Monika_was_delicious_by_woxys.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Monika_was_delicious_by_woxys.jpg; sourceTree = "<group>"; };
+		A113ED8B1257AADC00207B0A /* Obviously_dangerous_by_woxys.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Obviously_dangerous_by_woxys.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +175,8 @@
 		A10332C31241617F00CEB67B /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				A113ED8A1257AADC00207B0A /* Monika_was_delicious_by_woxys.jpg */,
+				A113ED8B1257AADC00207B0A /* Obviously_dangerous_by_woxys.jpg */,
 				A113EC871257709900207B0A /* content__yet_disturbing_by_woxys-d2zv869.jpg */,
 				A113EC881257709900207B0A /* nanga__the_beauty_queen_by_woxys-d2yfqxy.jpg */,
 			);
@@ -296,6 +304,8 @@
 			files = (
 				A113EC891257709900207B0A /* content__yet_disturbing_by_woxys-d2zv869.jpg in Resources */,
 				A113EC8A1257709900207B0A /* nanga__the_beauty_queen_by_woxys-d2yfqxy.jpg in Resources */,
+				A113ED8C1257AADC00207B0A /* Monika_was_delicious_by_woxys.jpg in Resources */,
+				A113ED8D1257AADC00207B0A /* Obviously_dangerous_by_woxys.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,6 +315,8 @@
 			files = (
 				A113EC8B1257709900207B0A /* content__yet_disturbing_by_woxys-d2zv869.jpg in Resources */,
 				A113EC8C1257709900207B0A /* nanga__the_beauty_queen_by_woxys-d2yfqxy.jpg in Resources */,
+				A113ED8E1257AADC00207B0A /* Monika_was_delicious_by_woxys.jpg in Resources */,
+				A113ED8F1257AADC00207B0A /* Obviously_dangerous_by_woxys.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
