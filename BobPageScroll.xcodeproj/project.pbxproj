@@ -42,6 +42,8 @@
 		A113ED8D1257AADC00207B0A /* Obviously_dangerous_by_woxys.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A113ED8B1257AADC00207B0A /* Obviously_dangerous_by_woxys.jpg */; };
 		A113ED8E1257AADC00207B0A /* Monika_was_delicious_by_woxys.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A113ED8A1257AADC00207B0A /* Monika_was_delicious_by_woxys.jpg */; };
 		A113ED8F1257AADC00207B0A /* Obviously_dangerous_by_woxys.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A113ED8B1257AADC00207B0A /* Obviously_dangerous_by_woxys.jpg */; };
+		A113EF3F125A77E700207B0A /* Screenshot 2010.10.04 21.58.51.png in Resources */ = {isa = PBXBuildFile; fileRef = A113EF3E125A77E700207B0A /* Screenshot 2010.10.04 21.58.51.png */; };
+		A113EF40125A77E700207B0A /* Screenshot 2010.10.04 21.58.51.png in Resources */ = {isa = PBXBuildFile; fileRef = A113EF3E125A77E700207B0A /* Screenshot 2010.10.04 21.58.51.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,6 +84,7 @@
 		A113ED111257709900207B0A /* TapDetectingImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TapDetectingImageView.m; sourceTree = "<group>"; };
 		A113ED8A1257AADC00207B0A /* Monika_was_delicious_by_woxys.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Monika_was_delicious_by_woxys.jpg; sourceTree = "<group>"; };
 		A113ED8B1257AADC00207B0A /* Obviously_dangerous_by_woxys.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Obviously_dangerous_by_woxys.jpg; sourceTree = "<group>"; };
+		A113EF3E125A77E700207B0A /* Screenshot 2010.10.04 21.58.51.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screenshot 2010.10.04 21.58.51.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +178,7 @@
 		A10332C31241617F00CEB67B /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				A113EF3E125A77E700207B0A /* Screenshot 2010.10.04 21.58.51.png */,
 				A113ED8A1257AADC00207B0A /* Monika_was_delicious_by_woxys.jpg */,
 				A113ED8B1257AADC00207B0A /* Obviously_dangerous_by_woxys.jpg */,
 				A113EC871257709900207B0A /* content__yet_disturbing_by_woxys-d2zv869.jpg */,
@@ -306,6 +310,7 @@
 				A113EC8A1257709900207B0A /* nanga__the_beauty_queen_by_woxys-d2yfqxy.jpg in Resources */,
 				A113ED8C1257AADC00207B0A /* Monika_was_delicious_by_woxys.jpg in Resources */,
 				A113ED8D1257AADC00207B0A /* Obviously_dangerous_by_woxys.jpg in Resources */,
+				A113EF3F125A77E700207B0A /* Screenshot 2010.10.04 21.58.51.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,6 +322,7 @@
 				A113EC8C1257709900207B0A /* nanga__the_beauty_queen_by_woxys-d2yfqxy.jpg in Resources */,
 				A113ED8E1257AADC00207B0A /* Monika_was_delicious_by_woxys.jpg in Resources */,
 				A113ED8F1257AADC00207B0A /* Obviously_dangerous_by_woxys.jpg in Resources */,
+				A113EF40125A77E700207B0A /* Screenshot 2010.10.04 21.58.51.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

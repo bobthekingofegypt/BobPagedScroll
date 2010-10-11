@@ -10,6 +10,7 @@
   					[UIImage imageNamed:@"nanga__the_beauty_queen_by_woxys-d2yfqxy.jpg"],
 				    [UIImage imageNamed:@"Monika_was_delicious_by_woxys.jpg"],
 				    [UIImage imageNamed:@"Obviously_dangerous_by_woxys.jpg"],
+					[UIImage imageNamed:@"Screenshot 2010.10.04 21.58.51.png"],
 					nil];
 	}
 	
