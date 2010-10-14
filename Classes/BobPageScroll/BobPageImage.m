@@ -1,5 +1,8 @@
 #import "BobPageImage.h"
 
+@interface BobPageImage (Private)
+-(void) setScrollViewZoomScales;
+@end
 
 @implementation BobPageImage
 
@@ -10,7 +13,7 @@
 		self.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
 		
 		_scrollView = [[UIScrollView alloc] initWithFrame:frame];
-		_scrollView.autoresizingMask = UIViewAutoresizingFlexibleWidth;// | UIViewAutoresizingFlexibleHeight;
+		_scrollView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
 		_scrollView.delegate = self;
 		_scrollView.bouncesZoom = YES;
 		_scrollView.clipsToBounds = YES;
@@ -49,28 +52,32 @@
 -(void) setImage:(UIImage *)image {
 	CGSize imageSize = image.size;
 	_imageView.image = image;
-	_imageView.frame = CGRectMake(0.0f, 0.0f, image.size.width, image.size.height);
+	_imageView.frame = CGRectMake(0.0f, 0.0f, imageSize.width, imageSize.height);
 	
-	CGSize boundsSize = [self bounds].size;
-	currentBounds = self.bounds;
-	
+	[self setScrollViewZoomScalesForBounds:self.bounds.size andImageSize:imageSize];
+    _scrollView.zoomScale = _scrollView.minimumZoomScale;
+}
+
+-(void) setScrollViewZoomScalesForBounds:(CGSize)boundsSize andImageSize:(CGSize)imageSize {	
     CGFloat xScale = boundsSize.width / imageSize.width; 
     CGFloat yScale = boundsSize.height / imageSize.height;
     CGFloat minScale = MIN(xScale, yScale);
-    
-    // on high resolution screens we have double the pixel density, so we will be seeing every pixel if we limit the
-    // maximum zoom scale to 0.5.
-    CGFloat maxScale = 1.0;// / [[UIScreen mainScreen] scale];
+    CGFloat maxScale = 1.0;
+	
+	if ([[UIScreen mainScreen] respondsToSelector:@selector(scale)]) {
+		maxScale = [[UIScreen mainScreen] scale];
+	}
 	
     if (minScale > maxScale) {
         minScale = maxScale;
     }
 	
+	_scrollView.zoomScale = 1.0f;
     _scrollView.contentSize = imageSize;
     _scrollView.maximumZoomScale = maxScale;
     _scrollView.minimumZoomScale = minScale;
-    _scrollView.zoomScale = minScale;
 }
+
 
 - (void)layoutSubviews {
     [super layoutSubviews];
@@ -97,32 +104,14 @@
 	BOOL isMin = (_scrollView.zoomScale == _scrollView.minimumZoomScale);
 	float old = _scrollView.zoomScale;
 	
-	_scrollView.zoomScale =1.0f;
+	_scrollView.zoomScale = 1.0f;
 	_imageView.frame = CGRectMake(0.0f, 0.0f, _imageView.image.size.width, _imageView.image.size.height);
-	
-	CGSize imageSize = _imageView.image.size;
-	CGSize boundsSize = theFrame.size;
-	currentBounds = self.bounds;
-	
 	_scrollView.frame = CGRectMake(0.0f,0.0f,theFrame.size.width, theFrame.size.height);
 	
-    CGFloat xScale = boundsSize.width / imageSize.width;
-    CGFloat yScale = boundsSize.height / imageSize.height;
-    CGFloat minScale = MIN(xScale, yScale);    
-    
-    // on high resolution screens we have double the pixel density, so we will be seeing every pixel if we limit the
-    // maximum zoom scale to 0.5.
-    CGFloat maxScale = 1.0;// / [[UIScreen mainScreen] scale];
-	
-    if (minScale > maxScale) {
-        minScale = maxScale;
-    }
-	
-    _scrollView.maximumZoomScale = maxScale;
-    _scrollView.minimumZoomScale = minScale;
+	[self setScrollViewZoomScalesForBounds:theFrame.size andImageSize:_imageView.image.size];
 	
 	if (isMin) {
-		_scrollView.zoomScale = minScale;
+		_scrollView.zoomScale = _scrollView.minimumZoomScale;
 	} else {
 		_scrollView.zoomScale = old;
 	}

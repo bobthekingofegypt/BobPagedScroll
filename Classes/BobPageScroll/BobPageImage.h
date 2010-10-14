@@ -5,8 +5,6 @@
 @interface BobPageImage : BobPage<UIScrollViewDelegate, TapDetectingImageViewDelegate> {
 	TapDetectingImageView *_imageView;
 	UIScrollView *_scrollView;
-	
-	CGRect currentBounds;
 }
 
 //@property (nonatomic, retain) UIImageView *imageView;
