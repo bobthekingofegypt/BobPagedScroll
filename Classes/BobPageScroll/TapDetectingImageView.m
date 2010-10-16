@@ -12,7 +12,6 @@
 @synthesize delegate;
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
-	NSLog(@"Image view tapped");
     [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(handleSingleTap) object:nil];
     
     if ([[event touchesForView:self] count] > 1)

@@ -8,8 +8,6 @@
 - (id)initWithFrame:(CGRect)frame andReuseIdentifier:(NSString *)reuseIdentifier {
     if ((self = [super initWithFrame:frame])) {
         _reuseIdentifier = [reuseIdentifier copy];
-		
-        // Initialization code
     }
     return self;
 }

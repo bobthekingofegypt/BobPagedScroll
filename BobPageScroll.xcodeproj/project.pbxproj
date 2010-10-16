@@ -44,6 +44,8 @@
 		A113ED8F1257AADC00207B0A /* Obviously_dangerous_by_woxys.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A113ED8B1257AADC00207B0A /* Obviously_dangerous_by_woxys.jpg */; };
 		A113EF3F125A77E700207B0A /* Screenshot 2010.10.04 21.58.51.png in Resources */ = {isa = PBXBuildFile; fileRef = A113EF3E125A77E700207B0A /* Screenshot 2010.10.04 21.58.51.png */; };
 		A113EF40125A77E700207B0A /* Screenshot 2010.10.04 21.58.51.png in Resources */ = {isa = PBXBuildFile; fileRef = A113EF3E125A77E700207B0A /* Screenshot 2010.10.04 21.58.51.png */; };
+		A1E2AD73126A0F3D00714D65 /* BobCenteringImageScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = A1E2AD72126A0F3D00714D65 /* BobCenteringImageScrollView.m */; };
+		A1E2AD74126A0F3D00714D65 /* BobCenteringImageScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = A1E2AD72126A0F3D00714D65 /* BobCenteringImageScrollView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -85,6 +87,8 @@
 		A113ED8A1257AADC00207B0A /* Monika_was_delicious_by_woxys.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Monika_was_delicious_by_woxys.jpg; sourceTree = "<group>"; };
 		A113ED8B1257AADC00207B0A /* Obviously_dangerous_by_woxys.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Obviously_dangerous_by_woxys.jpg; sourceTree = "<group>"; };
 		A113EF3E125A77E700207B0A /* Screenshot 2010.10.04 21.58.51.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screenshot 2010.10.04 21.58.51.png"; sourceTree = "<group>"; };
+		A1E2AD71126A0F3D00714D65 /* BobCenteringImageScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BobCenteringImageScrollView.h; sourceTree = "<group>"; };
+		A1E2AD72126A0F3D00714D65 /* BobCenteringImageScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BobCenteringImageScrollView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -198,6 +202,8 @@
 				A113EA501253CCAE00207B0A /* BobPageImage.m */,
 				A113ED101257709900207B0A /* TapDetectingImageView.h */,
 				A113ED111257709900207B0A /* TapDetectingImageView.m */,
+				A1E2AD71126A0F3D00714D65 /* BobCenteringImageScrollView.h */,
+				A1E2AD72126A0F3D00714D65 /* BobCenteringImageScrollView.m */,
 			);
 			path = BobPageScroll;
 			sourceTree = "<group>";
@@ -350,6 +356,7 @@
 				A1033401124A9FA600CEB67B /* FullScreenNumberPage.m in Sources */,
 				A113EA511253CCAE00207B0A /* BobPageImage.m in Sources */,
 				A113ED121257709900207B0A /* TapDetectingImageView.m in Sources */,
+				A1E2AD73126A0F3D00714D65 /* BobCenteringImageScrollView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -367,6 +374,7 @@
 				A113EA0B124BECA200207B0A /* BobPageScrollViewTest.m in Sources */,
 				A113EA521253CCAE00207B0A /* BobPageImage.m in Sources */,
 				A113ED131257709900207B0A /* TapDetectingImageView.m in Sources */,
+				A1E2AD74126A0F3D00714D65 /* BobCenteringImageScrollView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
