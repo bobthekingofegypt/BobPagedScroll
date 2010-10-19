@@ -70,7 +70,7 @@
 }
 
 -(BobPage *) bobPageScrollView:(BobPageScrollView *)bobPageScrollView pageForIndex:(NSUInteger)index {
-	static NSString *reuseIdentifier = @"Test";
+	static NSString *reuseIdentifier = @"PhotoPage";
 	
 	BobPageImage *page = (BobPageImage *)[bobPageScrollView dequeueReusablePageWithIdentifier:reuseIdentifier];
 	if (!page) {
