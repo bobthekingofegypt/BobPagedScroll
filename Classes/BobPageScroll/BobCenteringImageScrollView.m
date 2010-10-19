@@ -79,7 +79,6 @@
 	
 	self.zoomScale = 1.0f;
 	_imageView.frame = CGRectMake(0.0f, 0.0f, _imageView.image.size.width, _imageView.image.size.height);
-	self.frame = CGRectMake(0.0f,0.0f,theFrame.size.width, theFrame.size.height);
 	
 	[self setScrollViewZoomScalesForBounds:theFrame.size andImageSize:_imageView.image.size];
 	
