@@ -101,8 +101,14 @@
 		[self removePageForIndex:index];
 	}
 	
-	for (int index = firstNeededPageIndex; index <= lastNeededPageIndex; index++) {
-		currentIndex = index;
+	int overlap = (int)CGRectGetMinX(visibleBounds) % (int)CGRectGetWidth(visibleBounds);
+	if (overlap < (CGRectGetWidth(visibleBounds) / 2.0f)) {
+		currentIndex = firstNeededPageIndex;
+	} else {
+		currentIndex = lastNeededPageIndex;
+	}
+	
+	for (int index = firstNeededPageIndex; index <= lastNeededPageIndex; index++) {		
 		if (![self isDisplayingPageForIndex:index]) {
 			BobPage *page = [self pageForIndex:index];
 			[self setUpPage:page forIndex:index];
@@ -192,10 +198,10 @@
 #pragma mark ScrollView delegate methods
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
-	if (pagedScrollView.dragging) {
+	//NSLog(@"dragging %d, zooming %d, decelerating %d, zoombouncing %d", pagedScrollView.dragging, pagedScrollView.zooming, pagedScrollView.decelerating, pagedScrollView.zoomBouncing);
+	if (pagedScrollView.dragging && !(!pagedScrollView.dragging && pagedScrollView.decelerating)) {
 		[self layoutPages];
 	}
 }
-
 
 @end
