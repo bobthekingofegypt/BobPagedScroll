@@ -1,0 +1,584 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		A1809F9014994AD500425E88 /* Documentation */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = A1809F9114994AD500425E88 /* Build configuration list for PBXAggregateTarget "Documentation" */;
+			buildPhases = (
+				A1809F9414994AE500425E88 /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = Documentation;
+			productName = Documentation;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		A15BE0E814B79E0D009DE3DE /* BobPageTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A15BE0E414B79D67009DE3DE /* BobPageTest.m */; };
+		A15BE0E914B79E71009DE3DE /* BobCenteringImageScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE1898A14A4EDA500D354FA /* BobCenteringImageScrollView.m */; };
+		A15BE0F114B89414009DE3DE /* TapDetectingImageViewTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A15BE0EB14B7A23B009DE3DE /* TapDetectingImageViewTest.m */; };
+		A15BE12314B899AA009DE3DE /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A15BE11B14B899AA009DE3DE /* libOCMock.a */; };
+		A1809F5C1499491700425E88 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1809F5B1499491700425E88 /* Foundation.framework */; };
+		A1809F7C14994A1800425E88 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1809F7B14994A1800425E88 /* UIKit.framework */; };
+		A1809F7D14994A1800425E88 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1809F5B1499491700425E88 /* Foundation.framework */; };
+		A1809F7F14994A1800425E88 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1809F7E14994A1800425E88 /* CoreGraphics.framework */; };
+		A1809F8514994A1800425E88 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A1809F8314994A1800425E88 /* InfoPlist.strings */; };
+		A1809F8714994A1800425E88 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A1809F8614994A1800425E88 /* main.m */; };
+		A1809F8F14994A3E00425E88 /* GHUnitIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1809F721499499D00425E88 /* GHUnitIOS.framework */; };
+		A1809FA2149A93DC00425E88 /* BobPage.h in Headers */ = {isa = PBXBuildFile; fileRef = A1809FA0149A93DC00425E88 /* BobPage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A1809FA3149A93DC00425E88 /* BobPage.m in Sources */ = {isa = PBXBuildFile; fileRef = A1809FA1149A93DC00425E88 /* BobPage.m */; };
+		A1809FA6149A96AB00425E88 /* BobPagedScrollView.h in Headers */ = {isa = PBXBuildFile; fileRef = A1809FA4149A96AB00425E88 /* BobPagedScrollView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A1809FA7149A96AB00425E88 /* BobPagedScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = A1809FA5149A96AB00425E88 /* BobPagedScrollView.m */; };
+		A1809FAA149A9CBA00425E88 /* TapDetectingImageView.h in Headers */ = {isa = PBXBuildFile; fileRef = A1809FA8149A9CBA00425E88 /* TapDetectingImageView.h */; };
+		A1809FAB149A9CBA00425E88 /* TapDetectingImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = A1809FA9149A9CBA00425E88 /* TapDetectingImageView.m */; };
+		DAE1881014A29B5800D354FA /* BobPagedScrollViewTest.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE1880F14A29B5800D354FA /* BobPagedScrollViewTest.m */; };
+		DAE1881E14A2A00300D354FA /* BobPage.m in Sources */ = {isa = PBXBuildFile; fileRef = A1809FA1149A93DC00425E88 /* BobPage.m */; };
+		DAE1881F14A2A00700D354FA /* BobPagedScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = A1809FA5149A96AB00425E88 /* BobPagedScrollView.m */; };
+		DAE1882014A2A00B00D354FA /* TapDetectingImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = A1809FA9149A9CBA00425E88 /* TapDetectingImageView.m */; };
+		DAE1897014A38E4A00D354FA /* BobImagePage.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE1896F14A38E4A00D354FA /* BobImagePage.m */; };
+		DAE1897D14A3929700D354FA /* BobImagePage.h in Headers */ = {isa = PBXBuildFile; fileRef = DAE1896E14A38E4A00D354FA /* BobImagePage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DAE1897E14A392BA00D354FA /* BobImagePage.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE1896F14A38E4A00D354FA /* BobImagePage.m */; };
+		DAE1898B14A4EDA500D354FA /* BobCenteringImageScrollView.h in Headers */ = {isa = PBXBuildFile; fileRef = DAE1898914A4EDA500D354FA /* BobCenteringImageScrollView.h */; };
+		DAE1898C14A4EDA500D354FA /* BobCenteringImageScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE1898A14A4EDA500D354FA /* BobCenteringImageScrollView.m */; };
+		DAE1898F14A4EE1C00D354FA /* BobZoomImagePage.h in Headers */ = {isa = PBXBuildFile; fileRef = DAE1898D14A4EE1C00D354FA /* BobZoomImagePage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DAE1899014A4EE1C00D354FA /* BobZoomImagePage.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE1898E14A4EE1C00D354FA /* BobZoomImagePage.m */; };
+		DAE1899514A4EF4600D354FA /* BobZoomImagePage.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE1898E14A4EE1C00D354FA /* BobZoomImagePage.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A15BE0E414B79D67009DE3DE /* BobPageTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BobPageTest.m; sourceTree = "<group>"; };
+		A15BE0EB14B7A23B009DE3DE /* TapDetectingImageViewTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TapDetectingImageViewTest.m; sourceTree = "<group>"; };
+		A15BE11B14B899AA009DE3DE /* libOCMock.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libOCMock.a; sourceTree = "<group>"; };
+		A15BE11D14B899AA009DE3DE /* NSNotificationCenter+OCMAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNotificationCenter+OCMAdditions.h"; sourceTree = "<group>"; };
+		A15BE11E14B899AA009DE3DE /* OCMArg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMArg.h; sourceTree = "<group>"; };
+		A15BE11F14B899AA009DE3DE /* OCMConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMConstraint.h; sourceTree = "<group>"; };
+		A15BE12014B899AA009DE3DE /* OCMock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMock.h; sourceTree = "<group>"; };
+		A15BE12114B899AA009DE3DE /* OCMockObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMockObject.h; sourceTree = "<group>"; };
+		A15BE12214B899AA009DE3DE /* OCMockRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMockRecorder.h; sourceTree = "<group>"; };
+		A1809F581499491700425E88 /* libBobPagedScrollView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libBobPagedScrollView.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1809F5B1499491700425E88 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		A1809F5F1499491700425E88 /* BobPagedScrollView-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BobPagedScrollView-Prefix.pch"; sourceTree = "<group>"; };
+		A1809F721499499D00425E88 /* GHUnitIOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GHUnitIOS.framework; path = ExternalFrameworks/GHUnitIOS.framework; sourceTree = "<group>"; };
+		A1809F7914994A1700425E88 /* unittests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = unittests.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1809F7B14994A1800425E88 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		A1809F7E14994A1800425E88 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		A1809F8214994A1800425E88 /* unittests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "unittests-Info.plist"; sourceTree = "<group>"; };
+		A1809F8414994A1800425E88 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A1809F8614994A1800425E88 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A1809F8814994A1800425E88 /* unittests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "unittests-Prefix.pch"; sourceTree = "<group>"; };
+		A1809FA0149A93DC00425E88 /* BobPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BobPage.h; sourceTree = "<group>"; };
+		A1809FA1149A93DC00425E88 /* BobPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BobPage.m; sourceTree = "<group>"; };
+		A1809FA4149A96AB00425E88 /* BobPagedScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BobPagedScrollView.h; sourceTree = "<group>"; };
+		A1809FA5149A96AB00425E88 /* BobPagedScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BobPagedScrollView.m; sourceTree = "<group>"; };
+		A1809FA8149A9CBA00425E88 /* TapDetectingImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TapDetectingImageView.h; sourceTree = "<group>"; };
+		A1809FA9149A9CBA00425E88 /* TapDetectingImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TapDetectingImageView.m; sourceTree = "<group>"; };
+		DAE1880F14A29B5800D354FA /* BobPagedScrollViewTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BobPagedScrollViewTest.m; sourceTree = "<group>"; };
+		DAE1896E14A38E4A00D354FA /* BobImagePage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BobImagePage.h; sourceTree = "<group>"; };
+		DAE1896F14A38E4A00D354FA /* BobImagePage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BobImagePage.m; sourceTree = "<group>"; };
+		DAE1898914A4EDA500D354FA /* BobCenteringImageScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BobCenteringImageScrollView.h; sourceTree = "<group>"; };
+		DAE1898A14A4EDA500D354FA /* BobCenteringImageScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BobCenteringImageScrollView.m; sourceTree = "<group>"; };
+		DAE1898D14A4EE1C00D354FA /* BobZoomImagePage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BobZoomImagePage.h; sourceTree = "<group>"; };
+		DAE1898E14A4EE1C00D354FA /* BobZoomImagePage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BobZoomImagePage.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A1809F551499491700425E88 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1809F5C1499491700425E88 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A1809F7614994A1700425E88 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1809F8F14994A3E00425E88 /* GHUnitIOS.framework in Frameworks */,
+				A1809F7C14994A1800425E88 /* UIKit.framework in Frameworks */,
+				A1809F7D14994A1800425E88 /* Foundation.framework in Frameworks */,
+				A1809F7F14994A1800425E88 /* CoreGraphics.framework in Frameworks */,
+				A15BE12314B899AA009DE3DE /* libOCMock.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A15BE11A14B899AA009DE3DE /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				A15BE11B14B899AA009DE3DE /* libOCMock.a */,
+				A15BE11C14B899AA009DE3DE /* OCMock */,
+			);
+			path = Libraries;
+			sourceTree = "<group>";
+		};
+		A15BE11C14B899AA009DE3DE /* OCMock */ = {
+			isa = PBXGroup;
+			children = (
+				A15BE11D14B899AA009DE3DE /* NSNotificationCenter+OCMAdditions.h */,
+				A15BE11E14B899AA009DE3DE /* OCMArg.h */,
+				A15BE11F14B899AA009DE3DE /* OCMConstraint.h */,
+				A15BE12014B899AA009DE3DE /* OCMock.h */,
+				A15BE12114B899AA009DE3DE /* OCMockObject.h */,
+				A15BE12214B899AA009DE3DE /* OCMockRecorder.h */,
+			);
+			path = OCMock;
+			sourceTree = "<group>";
+		};
+		A1809F4D1499491700425E88 = {
+			isa = PBXGroup;
+			children = (
+				A15BE11A14B899AA009DE3DE /* Libraries */,
+				A1809F5D1499491700425E88 /* BobPagedScrollView */,
+				A1809F8014994A1800425E88 /* unittests */,
+				A1809F5A1499491700425E88 /* Frameworks */,
+				A1809F591499491700425E88 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A1809F591499491700425E88 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A1809F581499491700425E88 /* libBobPagedScrollView.a */,
+				A1809F7914994A1700425E88 /* unittests.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A1809F5A1499491700425E88 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A1809F721499499D00425E88 /* GHUnitIOS.framework */,
+				A1809F5B1499491700425E88 /* Foundation.framework */,
+				A1809F7B14994A1800425E88 /* UIKit.framework */,
+				A1809F7E14994A1800425E88 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A1809F5D1499491700425E88 /* BobPagedScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				A1809F5E1499491700425E88 /* Supporting Files */,
+				A1809FA0149A93DC00425E88 /* BobPage.h */,
+				A1809FA1149A93DC00425E88 /* BobPage.m */,
+				A1809FA4149A96AB00425E88 /* BobPagedScrollView.h */,
+				A1809FA5149A96AB00425E88 /* BobPagedScrollView.m */,
+				A1809FA8149A9CBA00425E88 /* TapDetectingImageView.h */,
+				A1809FA9149A9CBA00425E88 /* TapDetectingImageView.m */,
+				DAE1896E14A38E4A00D354FA /* BobImagePage.h */,
+				DAE1896F14A38E4A00D354FA /* BobImagePage.m */,
+				DAE1898914A4EDA500D354FA /* BobCenteringImageScrollView.h */,
+				DAE1898A14A4EDA500D354FA /* BobCenteringImageScrollView.m */,
+				DAE1898D14A4EE1C00D354FA /* BobZoomImagePage.h */,
+				DAE1898E14A4EE1C00D354FA /* BobZoomImagePage.m */,
+			);
+			path = BobPagedScrollView;
+			sourceTree = "<group>";
+		};
+		A1809F5E1499491700425E88 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A1809F5F1499491700425E88 /* BobPagedScrollView-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A1809F8014994A1800425E88 /* unittests */ = {
+			isa = PBXGroup;
+			children = (
+				A1809F8114994A1800425E88 /* Supporting Files */,
+				DAE1880F14A29B5800D354FA /* BobPagedScrollViewTest.m */,
+				A15BE0E414B79D67009DE3DE /* BobPageTest.m */,
+				A15BE0EB14B7A23B009DE3DE /* TapDetectingImageViewTest.m */,
+			);
+			path = unittests;
+			sourceTree = "<group>";
+		};
+		A1809F8114994A1800425E88 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A1809F8214994A1800425E88 /* unittests-Info.plist */,
+				A1809F8314994A1800425E88 /* InfoPlist.strings */,
+				A1809F8614994A1800425E88 /* main.m */,
+				A1809F8814994A1800425E88 /* unittests-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		A1809F561499491700425E88 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1809FA2149A93DC00425E88 /* BobPage.h in Headers */,
+				A1809FA6149A96AB00425E88 /* BobPagedScrollView.h in Headers */,
+				A1809FAA149A9CBA00425E88 /* TapDetectingImageView.h in Headers */,
+				DAE1897D14A3929700D354FA /* BobImagePage.h in Headers */,
+				DAE1898B14A4EDA500D354FA /* BobCenteringImageScrollView.h in Headers */,
+				DAE1898F14A4EE1C00D354FA /* BobZoomImagePage.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		A1809F571499491700425E88 /* BobPagedScrollView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A1809F651499491700425E88 /* Build configuration list for PBXNativeTarget "BobPagedScrollView" */;
+			buildPhases = (
+				A1809F541499491700425E88 /* Sources */,
+				A1809F551499491700425E88 /* Frameworks */,
+				A1809F561499491700425E88 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BobPagedScrollView;
+			productName = BobPagedScrollView;
+			productReference = A1809F581499491700425E88 /* libBobPagedScrollView.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		A1809F7814994A1700425E88 /* unittests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A1809F8C14994A1800425E88 /* Build configuration list for PBXNativeTarget "unittests" */;
+			buildPhases = (
+				A1809F7514994A1700425E88 /* Sources */,
+				A1809F7614994A1700425E88 /* Frameworks */,
+				A1809F7714994A1700425E88 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = unittests;
+			productName = unittests;
+			productReference = A1809F7914994A1700425E88 /* unittests.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A1809F4F1499491700425E88 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+				ORGANIZATIONNAME = "Richard Martin";
+			};
+			buildConfigurationList = A1809F521499491700425E88 /* Build configuration list for PBXProject "BobPagedScrollView" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = A1809F4D1499491700425E88;
+			productRefGroup = A1809F591499491700425E88 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A1809F571499491700425E88 /* BobPagedScrollView */,
+				A1809F7814994A1700425E88 /* unittests */,
+				A1809F9014994AD500425E88 /* Documentation */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A1809F7714994A1700425E88 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1809F8514994A1800425E88 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A1809F9414994AE500425E88 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/appledoc \\\n --project-name \"BobPagedScrollView\" \\\n --project-company \"bobstuff\" \\\n --company-id \"org.bobstuff\" \\\n --docset-atom-filename \"BobPagedScrollView.atom\" \\\n --docset-feed-url \"http://bobthekingofegypt.github.com/test/%DOCSETATOMFILENAME\" \\\n --docset-package-url \"http://bobthekingofegypt.github.com/test/%DOCSETPACKAGEFILENAME\" \\\n --docset-fallback-url \"http://bobthekingofegypt.github.com/test/\" \\\n --output \"~/help\" \\\n --publish-docset \\\n --logformat xcode \\\n --keep-undocumented-objects \\\n --keep-undocumented-members \\\n --keep-intermediate-files \\\n --no-repeat-first-par \\\n --no-warn-invalid-crossref \\\n --ignore \"*.m\" \\\n --ignore \"GH*.h\" \\\n --ignore \"Frameworks\" \\\n --ignore \"BobPagedScrollViewExample\" \\\n --ignore \"LoadableCategory.h\" \\\n --exit-threshold 2 \\\n \"${PROJECT_DIR}\"";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A1809F541499491700425E88 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1809FA3149A93DC00425E88 /* BobPage.m in Sources */,
+				A1809FA7149A96AB00425E88 /* BobPagedScrollView.m in Sources */,
+				A1809FAB149A9CBA00425E88 /* TapDetectingImageView.m in Sources */,
+				DAE1897E14A392BA00D354FA /* BobImagePage.m in Sources */,
+				DAE1898C14A4EDA500D354FA /* BobCenteringImageScrollView.m in Sources */,
+				DAE1899014A4EE1C00D354FA /* BobZoomImagePage.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A1809F7514994A1700425E88 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1809F8714994A1800425E88 /* main.m in Sources */,
+				DAE1881014A29B5800D354FA /* BobPagedScrollViewTest.m in Sources */,
+				DAE1881E14A2A00300D354FA /* BobPage.m in Sources */,
+				DAE1881F14A2A00700D354FA /* BobPagedScrollView.m in Sources */,
+				DAE1882014A2A00B00D354FA /* TapDetectingImageView.m in Sources */,
+				DAE1897014A38E4A00D354FA /* BobImagePage.m in Sources */,
+				DAE1899514A4EF4600D354FA /* BobZoomImagePage.m in Sources */,
+				A15BE0E814B79E0D009DE3DE /* BobPageTest.m in Sources */,
+				A15BE0E914B79E71009DE3DE /* BobCenteringImageScrollView.m in Sources */,
+				A15BE0F114B89414009DE3DE /* TapDetectingImageViewTest.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		A1809F8314994A1800425E88 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A1809F8414994A1800425E88 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A1809F631499491700425E88 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		A1809F641499491700425E88 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A1809F661499491700425E88 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					armv6,
+					x86,
+				);
+				DSTROOT = /tmp/BobPagedScrollView.dst;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/ExternalFrameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BobPagedScrollView/BobPagedScrollView-Prefix.pch";
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 3.1;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/ExternalFrameworks/OCMock\"",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		A1809F671499491700425E88 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					armv6,
+					x86,
+				);
+				DSTROOT = /tmp/BobPagedScrollView.dst;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/ExternalFrameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BobPagedScrollView/BobPagedScrollView-Prefix.pch";
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 3.1;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/ExternalFrameworks/OCMock\"",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		A1809F8D14994A1800425E88 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					armv6,
+					x86,
+				);
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/ExternalFrameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "unittests/unittests-Prefix.pch";
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/Libraries\"/**";
+				INFOPLIST_FILE = "unittests/unittests-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Libraries\"",
+				);
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		A1809F8E14994A1800425E88 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					armv6,
+					x86,
+				);
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/ExternalFrameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "unittests/unittests-Prefix.pch";
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/Libraries\"/**";
+				INFOPLIST_FILE = "unittests/unittests-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Libraries\"",
+				);
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		A1809F9214994AD500425E88 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A1809F9314994AD500425E88 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A1809F521499491700425E88 /* Build configuration list for PBXProject "BobPagedScrollView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A1809F631499491700425E88 /* Debug */,
+				A1809F641499491700425E88 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A1809F651499491700425E88 /* Build configuration list for PBXNativeTarget "BobPagedScrollView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A1809F661499491700425E88 /* Debug */,
+				A1809F671499491700425E88 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A1809F8C14994A1800425E88 /* Build configuration list for PBXNativeTarget "unittests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A1809F8D14994A1800425E88 /* Debug */,
+				A1809F8E14994A1800425E88 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A1809F9114994AD500425E88 /* Build configuration list for PBXAggregateTarget "Documentation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A1809F9214994AD500425E88 /* Debug */,
+				A1809F9314994AD500425E88 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A1809F4F1499491700425E88 /* Project object */;
+}

@@ -1,11 +1,8 @@
-# xcode noise
-build/*
-*.pbxuser
-*.mode1v3
+BobPagedScrollView.xcodeproj/project.xcworkspace/
+BobPagedScrollView.xcodeproj/xcuserdata/
+BobPagedScrollViewExample/BobPagedScrollViewExample.xcodeproj/project.xcworkspace/
+BobPagedScrollViewExample/BobPagedScrollViewExample.xcodeproj/xcuserdata/
+.idea/
+xcuserdata/
 
-# old skool
-.svn
-
-# osx noise
 .DS_Store
-profile
