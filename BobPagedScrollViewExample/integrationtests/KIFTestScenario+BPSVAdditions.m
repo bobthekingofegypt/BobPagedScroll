@@ -2,8 +2,8 @@
 //  KIFTestScenario+BPSVAdditions.m
 //  BobPagedScrollViewExample
 //
-//  Created by Richard Martin on 07/01/2012.
-//  Copyright (c) 2012 Richard Martin. All rights reserved.
+//  Copyright (c) 2011 Richard Martin. All rights reserved.
+//  Licensed under the terms of the BSD License, see LICENSE.txt
 //
 
 #import "KIFTestScenario+BPSVAdditions.h"

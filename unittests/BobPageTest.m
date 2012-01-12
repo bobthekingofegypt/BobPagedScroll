@@ -2,8 +2,8 @@
 //  BobPageTest.m
 //  BobPagedScrollView
 //
-//  Created by Richard Martin on 06/01/2012.
-//  Copyright (c) 2012 Richard Martin. All rights reserved.
+//  Copyright (c) 2011 Richard Martin. All rights reserved.
+//  Licensed under the terms of the BSD License, see LICENSE.txt
 //
 
 #import <GHUnitIOS/GHUnit.h>

@@ -2,8 +2,8 @@
 //  BobPhotoExample.h
 //  BobPagedScrollViewExample
 //
-//  Created by Richard Martin on 29/12/2011.
 //  Copyright (c) 2011 Richard Martin. All rights reserved.
+//  Licensed under the terms of the BSD License, see LICENSE.txt
 //
 
 #import <UIKit/UIKit.h>
