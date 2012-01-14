@@ -234,6 +234,7 @@
 
 
 -(void) scrollToPage:(NSUInteger)page animated:(BOOL)animated {
+    currentIndex = page;
     CGSize pageSize = CGSizeMake((self.bounds.size.width + (2 * self.padding)), self.bounds.size.height);
     NSInteger x = page * pageSize.width;
     [pagedScrollView scrollRectToVisible:CGRectMake(x, 0, pageSize.width, pageSize.height) animated:animated];
